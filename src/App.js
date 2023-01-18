@@ -14,7 +14,7 @@ function App() {
     <div className='App'>
     
       <Routes>
-         <Route path='/' element={<FirstPage tt={setEmail} dd={email}/>}/>
+         <Route path='/Name' element={<FirstPage tt={setEmail} dd={email}/>}/>
          <Route path='/home' element={<Home profile={email}/>}/>
          <Route path='/:movieId' element={<MovieDetails/>}/>
          <Route path='favoritmovie' element={<FavoriteMovies/>}/>
