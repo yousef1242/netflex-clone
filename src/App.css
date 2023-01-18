@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: sans-serif,monospace;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root{
+  --main-color:#e50914;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Firstpage{
+  background-image: url(./component/EG-ar-20230109-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.Firstpage .navbar{
+  position: absolute;
+  width: 100%;
+}
+.Firstpage::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  top: 0;
+  left: 0;
+  opacity: .5;
+  z-index: 1;
+}
+.TitlePage{
+  z-index: 2;
+  position: relative;
+  color: #fff;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.TitlePage h1{
+  font-size: 60px;
+  font-weight: bold;
 }
+.TitlePage h2{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.TitlePage p{
+  font-size: 20px;
+  font-weight: 600;
+}
+.TitlePage input{
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 45%;
+}
+.TitlePage input:focus{
+  border: none;
+  outline: none;
+}
+.TitlePage button{
+  width: 30%;
+  margin: 10px auto 0px auto;
+  display: block;
+  background-color: var(--main-color);
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px 0px;
+  color: #fff;
+}
+.TitlePage button:hover{
+  background-color: #f40612;
+}
+.TitlePage label{
+  text-align: center!important;
+  color: #ffa00a;
+}
+.NamePage{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+.NamePage i, .NamePage h1{
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+.NamePage img{
+  height: 230px;
+  margin-bottom: 30px;
+}
+.NamePage button{
+  width: auto;
+  padding: 10px 20px;
+  margin: 10px auto 20px auto;
+  display: block;
+  background-color: var(--main-color);
+  border: 0px;
+  border-radius: 4px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  color: #fff;
+  
+}
+.NamePage button:hover{
+  background-color: #f40612;
+}
+.navbarOne{
+  padding: 10px 0px;
+}
+.navbarOne .navbar-brand{
+  color: #f40612;
+  font-size: 50px;
+}
+.navbarOne .navbar-brand:hover{
+  color: #e50914;
+}
+.navbarOne img{
+  height: 70px;
+
+}
+.navbarOne .dropdown-toggle::after{
+  border: 0px;
+}
+.title-movie{
+  transition: .3s;
+}
+.title-movie:hover{
+  color: #f40612!important;
+}
+.navbarOne .navbar-toggler{
+  display: none;
+}
+.navbar-nav .dropdown-menu{
+  position: absolute!important;
+}
+.dropdown-menu[data-bs-popper]{
+  left: -84px!important;
+}
+.favoritMovie table, .favoritMovie table tbody td{
+  color: white!important;
+  border:1px #333 solid
+}
+.favoritMovie table{
+  text-align: center;
+}
+.favoritMovie button{
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+}
+.DetailsPage button{
+  padding: 8px;
+  border-radius: 1px;
+  border: 1px solid var(--main-color);
+  transition: .3s;
+  color: #fff;
+  background: none;
+  margin-bottom: 10px;
+}
+.favoritMovie button{
+  padding: 8px;
+  border-radius: 1px;
+  border: 1px solid var(--main-color);
+  transition: .3s;
+  color: #fff;
+  background: none;
+}
+.DetailsPage button:hover{
+  background: var(--main-color);
+}
+.favoritMovie button:hover{
+  background: var(--main-color);
+}
+@media screen and (max-width:984px) {
+  .TitlePage input{
+    width: 100%!important;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:766px) {
+  .DetailsPage button{
+    width: 100%;
+  }
+}
+@media screen and (min-width:984px) {
+  .TitlePage input{
+    width: 45%!important;
+  }
+}
+@media screen and (max-width:522px) {
+  .favoritMovie tbody, td, tfoot, th, thead, tr{
+    display: block;
+    margin-top: 10px;
+  }
+  .favoritMovie button{
+    width: 100%;
   }
 }

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
+
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/homePage/Home';
 import './App.css';
+import { FirstPage } from './pages/FirstPage/FirstPage';
+import { MovieDetails } from './pages/DetailsPage/MovieDetails';
+import { FavoriteMovies } from './pages/favoritPage/FavoriteMovies';
+import React, { useState } from 'react'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [email,setEmail] = useState("")
+  return(
+    <div className='App'>
+    
+      <Routes>
+         <Route path='/' element={<FirstPage tt={setEmail} dd={email}/>}/>
+         <Route path='/home' element={<Home profile={email}/>}/>
+         <Route path='/:movieId' element={<MovieDetails/>}/>
+         <Route path='favoritmovie' element={<FavoriteMovies/>}/>
+      </Routes>
     </div>
   );
 }
