@@ -16,7 +16,6 @@ body{
   position: relative;
 }
 .Firstpage .navbar{
-  position: absolute;
   width: 100%;
 }
 .Firstpage::after{
@@ -150,6 +149,7 @@ body{
 }
 .favoritMovie table{
   text-align: center;
+  margin: 0px;
 }
 .favoritMovie button{
   padding: 8px;

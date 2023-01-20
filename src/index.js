@@ -9,11 +9,11 @@ import Store from './rtk/Store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <Provider store={Store}>
      <BrowserRouter>
-     <Provider store={Store}>
-       <App />
-     </Provider>
+     <App />
      </BrowserRouter>
+     </Provider>
   </React.StrictMode>
 );
 

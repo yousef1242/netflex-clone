@@ -5,7 +5,7 @@ import {useSelector} from "react-redux"
 import { useDispatch } from 'react-redux'
 import NavbarOne from '../../component/NavbarOne';
 import { removeone } from '../../rtk/DetailsSlice';
-export const FavoriteMovies = () => {
+export const FavoriteMovies = (props) => {
     const rr= "https://image.tmdb.org/t/p/w500/"
     const state = useSelector((state) => state.addtofavorite)
     const dispatch = useDispatch()
@@ -13,7 +13,7 @@ export const FavoriteMovies = () => {
 
     <div className='favoritMovie' style={{background:"#222",minHeight:"100vh"}}>
        <Container>
-       <NavbarOne/>
+       <NavbarOne profile={props.profile}/>
        <br/>
        <br/>
        <Table  hover variant='dark'>

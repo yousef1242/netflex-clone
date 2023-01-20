@@ -7,7 +7,7 @@ export const FirstComponent = (props) => {
   return (
     <>
   <div className='TitlePage'>
-     <Container>
+     <Container className=''>
         <h1>Unlimited movies, TV</h1>
         <h1>shows, and more.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>

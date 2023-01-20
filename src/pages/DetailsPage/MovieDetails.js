@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import NavbarOne from '../../component/NavbarOne'
 import { AddTofavorite } from '../../rtk/DetailsSlice'
 
-export const MovieDetails = () => {
+export const MovieDetails = (props) => {
     const [details,setDetails] = useState({})
     const dispatch = useDispatch()
     
@@ -27,7 +27,7 @@ DetailsPage()
     <>
     
     <div className='DetailsPage' style={{background:"#111"}}>
-    <NavbarOne/>
+    <NavbarOne profile={props.profile}/>
     <br/>
     <br/>
     <Container>
